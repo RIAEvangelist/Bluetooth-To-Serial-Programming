@@ -1,4 +1,4 @@
-Bluetooth-To-Serial-Hookup-and-Programmin
+Bluetooth To Serial Hookup And Programming
 =========================================
 
 Diagrams and documents on hooking up bluetooth and serial boards to create a bluetooth to serial connection.
