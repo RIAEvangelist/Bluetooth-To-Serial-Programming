@@ -1,0 +1,28 @@
+{
+  "name": "bluetooth-programmer",
+  "version": "0.5.0",
+  "description": "Api to make programming bluetooth modules via USB or Serial simple and easy.",
+  "main": "bluetooth-programmer.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "serialport": "~1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming.git"
+  },
+  "keywords": [
+    "bluetooth","serial","programming","HC-05","HC-06","linvor","JY MCU"
+  ],
+  "author": "Brandon Nozaki Miller",
+  "license": "DBAD",
+  "bugs": {
+    "url": "https://github.com/RIAEvangelist/Bluetooth-To-Serial-Programming/issues"
+  }
+}
