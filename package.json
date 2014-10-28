@@ -1,6 +1,6 @@
 {
   "name": "bluetooth-programmer",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Api to make programming bluetooth modules via USB or Serial simple and easy.",
   "main": "bluetooth-programmer.js",
   "directories": {
