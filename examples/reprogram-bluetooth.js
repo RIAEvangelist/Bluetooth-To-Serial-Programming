@@ -1,9 +1,21 @@
+var fs=require('fs');
 var BTP=require('../bluetooth-programmer.js');
 var BTDevices=[];
+var currentID=false;
 
-//search all connected ports for Bluetooth devices and discover their baud rate.
-BTP.find(foundDevices);
-console.log('Searching for any BlueTooth devices connected via USB or serial')
+fs.readFile(
+    'lastID', 
+    function (err,data) {
+        currentID=Number(data);
+        if(!currentID)
+            currentID=0;
+        
+        currentID++;
+        BTP.find(foundDevices);
+        //search all connected ports for Bluetooth devices and discover their baud rate.
+        console.log('Searching for any BlueTooth devices connected via USB or serial');
+    }
+);
 
 
 function foundDevices(devices){
@@ -38,7 +50,14 @@ function connectedToBT(){
     );
     
     console.log('setting Name');
-    this.BTName('DNZ38400');
+    this.BTName('DNZ38400-'+currentID);
+    fs.writeFile(
+        'lastID',
+        currentID,
+        function (err) {
+            currentID++;
+        }
+    );
     console.log('setting Pin');
     this.BTPin('1314');
     console.log('setting parity');
