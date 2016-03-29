@@ -21,7 +21,6 @@ fs.readFile(
 function foundDevices(devices){
     var list=Object.keys(devices);
     BTDevices=devices;
-    console.log(devices);
     console.log('Found BT Devices :\n####>',devices);
     
     if(!list[0])
